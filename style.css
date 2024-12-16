@@ -1,0 +1,275 @@
+
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background: #f5f5f5;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background: #00796b;
+    color: #fff;
+    font-size: 2rem;
+    animation: slideIn 1s ease-out;
+}
+
+.animate-header {
+    animation: textGlow 2s infinite alternate;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 40px 20px;
+    background: linear-gradient(to right, #e0f7fa, #f1f8e9);
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 500px;
+    animation: fadeIn 1s ease-in;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    color: #00796b;
+}
+
+@media screen and (max-width: 400px) {
+    header{
+        font-size: 1rem;
+    }
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #004d40;
+    margin-bottom: 20px;
+}
+
+.hero-image img {
+    width: 300px;
+    height: auto;
+    animation: bounce 2s infinite alternate;
+}
+
+.explore-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #00796b;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: transform 0.2s;
+}
+
+.explore-btn:hover {
+    transform: scale(1.1);
+    background: #004d40;
+}
+
+#countdown {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#timer {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #d32f2f;
+}
+
+/* Reasons Section */
+.reasons {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 900px;
+}
+
+.reasons ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px auto;
+}
+
+.reasons li {
+    background: #b2dfdb;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: left;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* History Section */
+.history {
+    padding: 40px 20px;
+    background: #fffde7;
+    text-align: center;
+}
+
+.history ul {
+    list-style-type: square;
+    text-align: left;
+    display: inline-block;
+    color: #795548;
+}
+
+.history li {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+/* Quotes Section */
+.quotes {
+    background: #fce4ec;
+    padding: 40px 20px;
+    text-align: center;
+    font-style: italic;
+    font-size: 1.5rem;
+    color: #ad1457;
+    border-left: 5px solid #d81b60;
+    border-radius: 8px;
+    margin: 20px;
+}
+
+/* Personal Story Section */
+.story {
+    padding: 40px 20px;
+    background: #e3f2fd;
+    text-align: center;
+    border-left: 5px solid #0288d1;
+    border-radius: 8px;
+    margin: 20px;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 40px 20px;
+    background: #ede7f6;
+    text-align: center;
+}
+
+.testimonial {
+    background: #d1c4e9;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.8s ease-in-out;
+}
+
+/* FAQ Section */
+.faq {
+    padding: 40px 20px;
+    background: #f1f8e9;
+    text-align: left;
+}
+
+.faq-item {
+    margin: 20px 0;
+    padding: 15px;
+    background: #dcedc8;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item h3 {
+    color: #33691e;
+    font-size: 1.3rem;
+}
+
+.faq-item p {
+    font-size: 1rem;
+    color: #558b2f;
+}
+
+/* Footer */
+footer {
+    background: #004d40;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+/* Animations */
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes textGlow {
+    from {
+        text-shadow: 0 0 5px #00796b, 0 0 10px #00796b;
+    }
+    to {
+        text-shadow: 0 0 15px #004d40, 0 0 20px #004d40;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image img {
+        width: 80%;
+        margin-top: 20px;
+    }
+
+    .reasons ul, .history ul {
+        text-align: center;
+    }
+}
+
